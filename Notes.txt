@@ -1,0 +1,81 @@
+
+
+---------------------------------------------
+=> using programming language
+
+    - instruction(s)
+        |
+        V
+     - program(s)   
+        |
+        V
+     - process    ( at OS level )
+---------------------------------------------    
+
+e.g javascript
+
+
+    how to run javascript program ?
+
+        ==> using javascript runtime/interpreter
+
+    browser envi
+    -------------
+
+        => chrome  ( v8 )        " client "
+        => firefox ( spider-monkey )
+        => IE/Edge ( chakra )
+        => safari  ( Nitro )
+
+    other envi
+    ------------
+
+        => Node.js ( v8 )         " desktop or server "
+
+
+  --------------------------------------------------------
+
+    what is Node.js ?
+
+    ==> Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+      clarity :
+
+              javascript ==> language
+
+              Node.js ==> javascript runtime
+                
+    ----------------------------------------------------------
+
+
+     why should i use Node.js-runtime instead of other-runtime ( like java, .net, python , ...) ?
+
+        => Node.js uses asynchronous / non-blocking execution  by default.
+
+        -> synchronous / blocking execution / pull
+        -> asynchronous / non-blocking execution  / push
+
+    ----------------------------------------------------------   
+
+    process contains 2 types of execution
+
+        => computation  ( making result   i,e internal to process)
+        => IO           ( read/write from external , i.e external to process )
+
+    ----------------------------------------------------------  
+
+
+    process vs thread
+    ------------------
+
+    process:
+
+     ==> whole execution in OS
+     ==> hold's private memory
+     ==> identified by unique Id
+
+
+    thread:
+
+     ==> light-weigh process
+     ==> multiple threads share same memory    
