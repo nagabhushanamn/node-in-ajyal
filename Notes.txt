@@ -79,3 +79,13 @@ e.g javascript
 
      ==> light-weigh process
      ==> multiple threads share same memory    
+
+
+----------------------------------------------------------
+
+
+Node.js
+--------
+
+    => Node.js =>asynchronous/ non-blocking IO 
+    => Node.js =>event model
