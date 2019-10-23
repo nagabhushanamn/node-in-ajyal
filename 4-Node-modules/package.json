@@ -1,0 +1,19 @@
+{
+  "name": "node-modules-learning",
+  "version": "1.0.0",
+  "description": "ajyal node.js training",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js"
+  },
+  "keywords": [
+    "ajyal",
+    "Nag"
+  ],
+  "author": "Nag",
+  "license": "ISC",
+  "dependencies": {
+    "ajyal-oct-greet": "^1.1.0",
+    "lodash": "^4.17.15"
+  }
+}
