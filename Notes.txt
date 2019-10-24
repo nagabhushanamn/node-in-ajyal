@@ -145,3 +145,12 @@ use :
   
 
   ---------------------------
+  Todo-web-app
+  ------------------------------
+
+   GET    /todos                       ==> return all todos
+   GET    /todos?filter=active         ==> return active todos
+   GET    /todos?filter=completed      ==> return completed todos
+   POST   /todos                       ==> save new todo
+   PUT    /todos/{id}                  ==> update existing todo
+   DELETE /todos/{id}                  ==> delete existing todo
