@@ -154,3 +154,14 @@ use :
    POST   /todos                       ==> save new todo
    PUT    /todos/{id}                  ==> update existing todo
    DELETE /todos/{id}                  ==> delete existing todo
+
+
+
+   -----------------------------------------------
+
+
+   Express - Middleware(s)
+   -----------------------
+
+
+   Middleware  => a function which executes between request & response

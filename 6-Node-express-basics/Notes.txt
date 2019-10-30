@@ -1,0 +1,67 @@
+
+
+
+
+--------------------------------------------------------
+
+            client                 server
+                    
+                    HTTP-request
+                    ---------------->
+                    <----------------
+                    HTTP-response
+
+--------------------------------------------------------         
+
+
+HTTP-methods
+--------------
+
+    -> what type of request client want to do with server
+
+
+    GET     ==> read
+    POST    ==> to create new resource
+    PUT     ==> to update existing resource
+    DELETE  ==> to delete existing resource
+
+    HEAD    ==> to read details ( size, creation Time & Date ) of resource
+    PATCH   ==> to update partial details of resource
+    OPTION  ==> to know permission details on that resource
+
+
+HTTP-staus-codes 
+-------------------   
+
+    ==> client wants to know staus of request
+
+
+ 1xx  ==> networking b/w client & server  
+ 2xx  ==> Successful responses
+ 3xx  ==> Redirection messages
+ 4xx  ==> Client error responses
+ 5xx  ==> Server error responses
+
+
+ ref : https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+
+
+-------------------------------------------------
+
+
+express framework
+----------------
+
+==> how to handle different types of http-requests
+
+express framework advanced
+---------------------------
+
+    - middlewares
+    - routes
+    - template engines
+
+----------------------------
+
+
