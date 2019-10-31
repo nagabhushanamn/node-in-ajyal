@@ -6,7 +6,7 @@ class Index extends Component {
         return (
             <DefaultLayout title={this.props.title}>
                 <div className="container">
-                    <a href="todos">View Todos</a>
+                    <a href="todos">Manage Todos</a>
                 </div>
             </DefaultLayout>
         );

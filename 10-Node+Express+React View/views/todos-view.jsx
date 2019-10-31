@@ -12,15 +12,23 @@ const TodosView = (props) => {
                     <td><span className="badge">{todo.id}</span></td>
                     <td><span>{todo.title}</span></td>
                     <td><span>{todo.completed ? 'Done' : 'Pending'}</span></td>
-                    <td><i className="fa fa-edit"></i></td>
-                    <td><i className="fa fa-trash"></i></td>
+                    <td>
+                        <a href={"/todos/edit?id=" + todo.id}>
+                            <i className="fa fa-edit"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href={"/todos/delete?id=" + todo.id}>
+                            <i className="fa fa-trash"></i>
+                        </a>
+                    </td>
                 </tr>
             )
         })
     }
     return (
         <DefaultLayout>
-            <NewTodo />
+            <NewTodo todo={props.todoToEdit} isEditing={props.isEditing} />
             <hr />
             {props.message}
             <hr />

@@ -5,8 +5,8 @@ const DefaultLayout = (props) => {
         <html>
             <head>
                 <title>{props.title}</title>
-                <link href="css/bootstrap.css" rel="stylesheet" />
-                <link href="fontawesome/css/all.min.css" rel="stylesheet" />
+                <link href="/css/bootstrap.css" rel="stylesheet" />
+                <link href="/fontawesome/css/all.min.css" rel="stylesheet" />
             </head>
             <body className="container">
                 <hr />
