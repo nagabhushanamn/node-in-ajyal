@@ -1,0 +1,15 @@
+
+
+express router
+--------------
+
+    -> a object, holds logic to handle related requests
+
+
+    e.g
+
+    - items router
+
+    - cart router
+
+    - order router

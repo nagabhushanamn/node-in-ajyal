@@ -12,7 +12,7 @@ app.use(express.static(__dirname + "/repo"))
 app.get("/repo", (req, res) => {
     fs.readdir(__dirname + "/repo", (err, result) => {
         // res.send(result)
-        res.render('RepoView', { result })
+        res.render('RepoView', { result }) // <RepoView result={result}/>
     })
 })
 
