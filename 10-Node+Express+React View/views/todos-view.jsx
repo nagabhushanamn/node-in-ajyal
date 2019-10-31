@@ -1,5 +1,6 @@
 import React from 'react';
 import DefaultLayout from './default'
+import NewTodo from './NewTodo';
 
 const TodosView = (props) => {
     let { todos } = props;
@@ -7,20 +8,21 @@ const TodosView = (props) => {
         return todos.map(todo => {
             return (
                 <tr>
-                    <td><input type="checkbox"/></td>
+                    <td><input type="checkbox" /></td>
                     <td><span className="badge">{todo.id}</span></td>
                     <td><span>{todo.title}</span></td>
-                    <td><span>{todo.completed}</span></td>
-                    <td>Edit</td>
-                    <td>Delete</td>
+                    <td><span>{todo.completed ? 'Done' : 'Pending'}</span></td>
+                    <td><i className="fa fa-edit"></i></td>
+                    <td><i className="fa fa-trash"></i></td>
                 </tr>
             )
         })
     }
     return (
         <DefaultLayout>
+            <NewTodo />
             <div className="card card-body">
-                <table className="table table-bordered">
+                <table className="table table-dark table-bordered table-sm table-striped">
                     <tbody>
                         {renderTodos()}
                     </tbody>
