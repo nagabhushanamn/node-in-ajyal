@@ -14,13 +14,18 @@ router
   })
   .post("/", function (req, res) {
     const body = req.body;
-    let newTodo = {
-      id: todos.length + 1,
-      title: body.title,
-      completed: false
+    if (body.title) {
+      let newTodo = {
+        id: todos.length + 1,
+        title: body.title,
+        completed: false
+      }
+      todos.push(newTodo);
+      res.redirect("/todos"); // TO VIEW ALL TODOS
+    } else {
+      res.render('todos-view', { todos, message: 'Title is empty' }) // react view
     }
-    todos.push(newTodo);
-    res.redirect("/todos"); // TO VIEW ALL TODOS
+
   })
 
 

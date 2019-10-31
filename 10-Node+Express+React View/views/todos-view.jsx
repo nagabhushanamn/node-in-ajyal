@@ -1,6 +1,6 @@
 import React from 'react';
 import DefaultLayout from './default'
-import NewTodo from './NewTodo';
+import NewTodo from './new-todo';
 
 const TodosView = (props) => {
     let { todos } = props;
@@ -21,6 +21,9 @@ const TodosView = (props) => {
     return (
         <DefaultLayout>
             <NewTodo />
+            <hr />
+            {props.message}
+            <hr />
             <div className="card card-body">
                 <table className="table table-dark table-bordered table-sm table-striped">
                     <tbody>
