@@ -2,14 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 let todos = [
-  { id: 1, title: 'go home', completed: true },
-  { id: 2, title: 'go dubai', completed: false },
-  { id: 3, title: 'Teach REST Api in next week', completed: false },
+  { id: 1, title: 'teach Node.js', completed: true },
+  { id: 2, title: 'teach REST', completed: false },
+  { id: 3, title: 'Teach database in next week', completed: false },
 ]
 
 router
   .get('/', function (req, res, next) {
-    res.json(todos)
+    // load all todos from database...
+    res.json(todos) // JSON  ==> data-format
   })
   .get('/:id', (req, res) => {
     let id = Number.parseInt(req.params.id);
@@ -24,16 +25,16 @@ router
     res.json({ count: 1 })
   })
   .post("/", function (req, res) {
-    const body = req.body;
+    const body = req.body; // json
     if (body.title) {
       let newTodo = {
         id: todos.length + 1,
         title: body.title,
         completed: false
       }
-      todos.push(newTodo);
+      todos.push(newTodo); // save this in databse..
+      res.status(201).json(newTodo)
     }
-    res.status(201).json(newTodo)
   })
   .put("/", function (req, res) {
     const body = req.body;
@@ -47,15 +48,15 @@ router
   .put("/:id", function (req, res) {
     const body = req.body;
     const action = body.action;
-    let id = Number.parseInt(body.id)
+    let id = Number.parseInt(req.params.id)
     let existingTodo = todos.find(todo => todo.id === id)
     if (action && action === "complete") {
-      existingTodo.completed = !existingTodo.completed
+      existingTodo.completed = !existingTodo.completed // toggle
     }
     else {
       existingTodo.title = body.title
     }
-    res.json({ status: 'updated' })
+    res.json(existingTodo)
   })
 
 
