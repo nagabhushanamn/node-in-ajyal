@@ -1,11 +1,15 @@
 import React from 'react';
-import { StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import TodosView from './components/todos-view'
 
+import store from './store';
+import { Provider } from 'react-redux'
 
 export default function App() {
   return (
-    <TodosView />
+    <Provider store={store}>
+      <TodosView />
+    </Provider>
   );
 }
 
