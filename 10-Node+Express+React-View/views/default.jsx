@@ -10,7 +10,7 @@ const DefaultLayout = (props) => {
             </head>
             <body className="container">
                 <hr />
-                <h1>Node + Express + React</h1>
+                <h1>Node + Express + React-View ( server-side )</h1>
                 <hr />
                 {props.children}
             </body>
