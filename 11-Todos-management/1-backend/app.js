@@ -3,10 +3,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override')
+var cors = require('cors')
 
 var todosRouter = require('./routes/todos');
 
 var app = express();
+
+app.use(cors())
+
 
 app.use(methodOverride('_method'))
 
