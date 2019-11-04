@@ -1,57 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>chat</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat Example</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <ul class="pages">
+    <li class="chat page">
+      <div class="chatArea">
+        <ul class="messages"></ul>
+      </div>
+      <input class="inputMessage" placeholder="Type here..."/>
+    </li>
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">What's your nickname?</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+      </div>
+    </li>
+  </ul>
 
-<body class="container">
-    <hr />
-    <h1>Ajyal chat</h1>
-    <hr />
-
-    <form>
-        <div class="card card-body bg-info">
-            <div class="row">
-                <div class="col-5 col-sm-5 col-md-5">
-                    <input class="form-control" id="m" />
-                </div>
-                <div class="col-3 col-sm-3 col-md-3">
-                    <button class="btn btn-dark">send</button>
-                </div>
-            </div>
-        </div>
-    </form>
-    <hr />
-
-    <div class="card card-body bg-light">
-        <ul class="list-group" id="messages">
-        </ul>
-    </div>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-        $(function () {
-            var socket = io();
-            $('form').submit(function (e) {
-                e.preventDefault(); // prevents page reloading
-                socket.emit('chat message', $('#m').val());
-                $('#m').val('');
-                return false;
-            });
-            socket.on('chat message', function (msg) {
-                $('#messages').append($('<li>').addClass('list-group-item').text(msg));
-            });
-        });
-    </script>
-
-
-
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
 </body>
-
 </html>
