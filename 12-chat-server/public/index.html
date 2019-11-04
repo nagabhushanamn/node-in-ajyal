@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+</head>
+
+<body class="container">
+    <hr />
+    <h1>Ajyal chat</h1>
+    <hr />
+
+    <form>
+        <div class="card card-body bg-info">
+            <div class="row">
+                <div class="col-5 col-sm-5 col-md-5">
+                    <input class="form-control" id="m" />
+                </div>
+                <div class="col-3 col-sm-3 col-md-3">
+                    <button class="btn btn-dark">send</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <hr />
+
+    <div class="card card-body bg-light">
+        <ul class="list-group" id="messages">
+        </ul>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            var socket = io();
+            $('form').submit(function (e) {
+                e.preventDefault(); // prevents page reloading
+                socket.emit('chat message', $('#m').val());
+                $('#m').val('');
+                return false;
+            });
+            socket.on('chat message', function (msg) {
+                $('#messages').append($('<li>').addClass('list-group-item').text(msg));
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

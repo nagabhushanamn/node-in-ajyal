@@ -1,0 +1,43 @@
+
+
+
+----------------------------------------------------------------------
+
+HTML  ==> web content
+CSS   ==> styling HTML elements
+javascript  ==> full-stack ( client/browser  & server-side programming language )
+react   ==> component based UI library for web/browser
+react-native ==> component based UI library for mobile platoforms ( Android / IOS )
+redux    ==> UI state/data management library
+
+Node.js   ==> server-side javascript-runtime with Async/non-blocking IO 
+express.js ==> frameworj for building web application on Node.js
+
+----------------------------------------------------------------------
+
+
+Todos- backend application
+---------------------------
+
+    resource : Todo
+
+      /todos
+      /todos/id
+
+
+REST ( REpresentational State Transfer ) API
+--------------------------------------------------------
+
+      GET /todos
+      POST /todos
+      DELETE /todos/id
+      PUT /todos/id
+
+
+      Ref : https://en.wikipedia.org/wiki/Representational_state_transfer
+
+      
+
+
+
+
